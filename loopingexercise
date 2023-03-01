@@ -1,0 +1,21 @@
+integer = int(input("Enter an integer: "))
+
+found_pair = False
+root = 1
+power = 1
+
+while root ** power <= integer and power < 6:
+    while root ** power <= integer and power < 6:
+        if root ** power == integer:
+            found_pair = True
+            break
+        power += 1
+    if found_pair:
+        break
+    root += 1
+    power = 1
+
+if found_pair:
+    print(f"The root and power of {integer} are {root} and {power}.")
+else:
+    print(f"No such pair of integers exist for {integer}.")
